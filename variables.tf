@@ -26,8 +26,8 @@ variable "label_order" {
 
 variable "managedby" {
   type        = string
-  default     = ""
-  description = "ManagedBy, eg ''."
+  default     = "contact@slovink.com"
+  description = "ManagedBy, eg 'slovink'."
 }
 
 variable "enabled" {
@@ -36,11 +36,11 @@ variable "enabled" {
   default     = true
 }
 
-variable "tags" {
-  description = "A map of tags to add to all resources"
-  type        = map(string)
-  default     = {}
-}
+#variable "tags" {
+#  description = "A map of tags to add to all resources"
+#  type        = map(string)
+#  default     = {}
+#}
 
 variable "resource_group_name" {
   type        = string
@@ -67,6 +67,7 @@ variable "account_tier" {
 }
 
 variable "access_tier" {
+  type        = string
   default     = "Hot"
   description = "Defines the access tier for BlobStorage and StorageV2 accounts. Valid options are Hot and Cool."
 }
@@ -108,7 +109,8 @@ variable "containers_list" {
 }
 
 variable "network_rules" {
-  default     = {}
+  type        = string
+  default     = ""
   description = "List of objects that represent the configuration of each network rules."
 }
 
