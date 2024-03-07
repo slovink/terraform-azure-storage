@@ -107,7 +107,6 @@ variable "containers_list" {
   default     = []
   description = "List of containers to create and their access levels."
 }
-
 variable "network_rules" {
   type        = string
   default     = ""
